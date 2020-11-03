@@ -5,7 +5,8 @@
     let hashtag = $('#hiddenhashtag').val();
      function getUID(){
             $.ajax({
-                url:'http://imy.up.ac.za/IMY220/u17074292//API.php',
+                //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+                url:"http://localhost/IMY220_Project/API.php",
                 type:'GET',
                 cache:false,
                 data:{
@@ -22,7 +23,8 @@
 
      function postToAPI(userID){
             $.ajax({
-                url:'http://imy.up.ac.za/IMY220/u17074292//API.php',
+                //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+                url:"http://localhost/IMY220_Project/API.php",
                 type:'POST',
                 cache:false,
                 data:{

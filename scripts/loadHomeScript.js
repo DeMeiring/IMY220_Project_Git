@@ -1,7 +1,8 @@
 (()=>{
         let template = $('#galleryContainer').html();
         $.ajax({
-            url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+            //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+            url:"http://localhost/IMY220_Project/API.php",
             type:'GET',
             cache:false,
             data:{
@@ -31,7 +32,8 @@
 
 function loadComments(galleryID){
     $.ajax( {
-        url:'http://imy.up.ac.za/IMY220/u17074292//API.php',
+        //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+        url:"http://localhost/IMY220_Project/API.php",
         type:'GET',
         cache:false,
         data:{
@@ -51,7 +53,8 @@ function loadComments(galleryID){
 
 function getUsername(uid , index){
     $.ajax({
-        url:'http://imy.up.ac.za/IMY220/u17074292//API.php',
+        //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+        url:"http://localhost/IMY220_Project/API.php",
         type:'GET',
         cache:false,
         data:{
