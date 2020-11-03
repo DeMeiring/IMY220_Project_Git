@@ -1,6 +1,6 @@
 testAPI=()=>{
     $.ajax({
-        url:'http://localhost/IMY220_Project/API.php',
+        url:'http://imy.up.ac.za/IMY220/u17074292//API.php',
         type:'GET',
         cache:false,
         data:{
