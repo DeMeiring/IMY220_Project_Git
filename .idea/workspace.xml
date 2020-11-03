@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e060f589-c42b-4c47-9fa2-0fff7ae9e611" name="Default Changelist" comment="" />
+    <list default="true" id="e060f589-c42b-4c47-9fa2-0fff7ae9e611" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/30_Meiring.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/displayImages/black_rock.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/displayImages/d1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/displayImages/d3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/displayImages/d4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profilePictures/deault.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profilePictures/purple.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +26,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -86,6 +98,7 @@
       <workItem from="1601976195217" duration="489000" />
       <workItem from="1602162437970" duration="28000" />
       <workItem from="1604392468186" duration="5939000" />
+      <workItem from="1604416695556" duration="1095000" />
     </task>
     <servers />
   </component>
