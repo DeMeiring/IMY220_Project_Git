@@ -1,0 +1,20 @@
+testAPI=()=>{
+    $.ajax({
+        url:'http://localhost/IMY220_Project/API.php',
+        type:'GET',
+        cache:false,
+        data:{
+            'gaImages':0,
+        },
+        success:(res)=>{
+            console.log(res);
+        },
+        error:(e)=>{
+            console.log(e);
+        }
+    })
+}
+
+(()=>{
+    testAPI();
+})()

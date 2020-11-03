@@ -1,0 +1,19 @@
+(()=>{
+    let userEmail=$('#hiddenEmail').val();
+    $.ajax({
+        url:'http://localhost/IMY220_Project/API.php',
+        type:'GET',
+        cache:false,
+        data:{
+            'userEmail':userEmail,
+        },
+        success:(res)=>{
+            $('#useremail').text(userEmail);
+            $('#username').text(res[0]['username']);
+            $('img').attr('src',res[0]['pfpImage']);
+        },
+        error:(e)=>{
+            console.log(e);
+        }
+    })
+})()

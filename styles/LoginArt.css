@@ -1,0 +1,198 @@
+body{
+    background: url("../Images/grainy_background.jpg");
+}
+
+*{
+    color: rgb(240, 234, 214);
+}
+
+::placeholder{
+    color:rgba(245,245,245,0.9);
+    opacity: 0.5;
+}
+
+i{
+    padding-right: 1em;
+}
+
+input{
+    background-color: rgba(0,0,0,0.1);
+}
+
+@keyframes text {
+    from{
+        font-size: 60px;
+        opacity: 0;
+    }
+    to{
+        font-size:100px ;
+        opacity: 1;
+    }
+
+}
+
+@keyframes thousandText {
+    from{
+        letter-spacing: 25px;
+    }
+    to{
+        letter-spacing: normal;
+    }
+}
+
+#thousand{
+    animation-name: thousandText;
+    animation-duration: 5s;
+}
+
+
+#textAnimateContainer{
+    border-radius: 17px;
+    margin-top: 10%;
+    margin-right: -2%;
+    text-align: left;
+    padding: 0;
+}
+
+div .textAnimate{
+    font-family: 'Poppins', sans-serif;
+    font-size:100px ;
+    color: rgb(240, 234, 214);
+    animation-name: text;
+    animation-duration: 5s;
+}
+
+.artContainer{
+    width:70%;
+    height: 80%;
+    padding: 1em;
+    margin-top: 7em;
+    color: white;
+    border:none;
+    transition: width 1.1s,height 1s, border 1s;
+}
+
+label{
+    margin: 0.5em;
+}
+
+#username{
+    padding: 0.5em;
+    margin: 2em;
+}
+
+#password{
+    padding: 0.5em;
+    margin: 2em;
+}
+
+#largeFrame{
+    height: 100%;
+}
+
+#pswIn{
+    background-color: rgba(0,0,0,0.1);
+    padding: 0.5em;
+    transition: border 1s;
+}
+
+#emailIn{
+    color: white;
+    padding: 0.5em;
+    transition: border 1s;
+}
+
+.loginContainer{
+    border:none;
+}
+
+.registerContainer{
+    border:none;
+}
+
+.loginContainer:hover{
+    border: 0.3em solid rgba(240, 234, 214,0.6);
+    border-radius: 5px;
+    transition: border 2s;
+}
+
+.registerContainer:hover{
+    border: 0.3em solid rgba(240, 234, 214,0.6);
+    border-radius: 5px;
+    transition: border 2s;
+}
+
+input[class^="btn"]{
+    border: 0.1em solid rgba(240, 234, 214,0.3);
+    padding: 0.5em;
+    transition: border 0.5s, margin-top 1s,transform 0.5s;
+    height: 4em;
+}
+
+#Login:hover i{
+    transition:transform 0.5s;
+    transform: translateX(10px) rotateZ(360deg);
+}
+
+#Login i{
+    transition: transform 0.5s;
+}
+
+#Register:hover i{
+    transition:transform 0.5s;
+    transform: translateX(10px) rotateZ(360deg);
+}
+
+#Register i{
+    transition: transform 0.5s;
+}
+
+.artContainer:hover #loginSubmit{
+    margin-top: 1em;
+}
+
+.artContainer:hover #registerSubmit{
+    margin-top: 1em;
+}
+
+#loginSubmit:hover{
+    border: 0.1em solid rgba(240, 234, 214,0.9);
+    border-radius: 5px;
+}
+
+#loginSubmit {
+    transition: transform 0.5s;
+}
+
+#registerSubmit:hover{
+    border: 0.1em solid rgba(240, 234, 214,0.9);
+    border-radius: 5px;
+}
+
+#formLogin{
+    opacity: 0;
+    transition: opacity 1s;
+    width: 70%;
+}
+
+#formRegister{
+    opacity: 0;
+    transition: opacity 1s;
+    width: 70%;
+}
+
+#Register:hover>#formRegister{
+    opacity: 1;
+}
+
+#Login:hover>#formLogin{
+    opacity: 1;
+}
+
+#frmControl>label{
+    padding-top: 1em;
+}
+
+#frmControl>input{
+    padding-top: 1em;
+}
