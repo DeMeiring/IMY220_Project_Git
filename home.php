@@ -70,14 +70,12 @@
                 <div class="commentContainer col overflow-auto">
 
                 </div>
-                <form action="home.php" method="post" class="commentForm col">
                     <div class="row">
                         <input class="col-8 overflow-auto" type="text" name="newComment" placeholder="120 character limit">
                         <button type="submit" class="commentButton col">comment</button>
                     </div>
-                </form>
             </div>
-            <img src="" alt="">
+            <img src="" alt="There should be a picture here">
             <br>
             <div class="userCaption col">
                 
@@ -107,14 +105,12 @@
                 <div class="commentContainer col overflow-auto">
 
                 </div>
-                <form action="home.php" method="post" class="commentForm col">
                     <div class="row">
-                        <input class="col-8 overflow-auto" type="text" name="newComment" placeholder="Lovely post :)">
+                        <input class="col-8 overflow-auto" type="text" name="newComment" placeholder="120 character limit">
                         <button type="submit" class="commentButton col">comment</button>
                     </div>
-                </form>
             </div>
-            <img src="" alt=""><br>
+            <img src="" alt="There should be a picture here"><br>
             <div class="userCaption">
                 
             </div>
@@ -143,14 +139,12 @@
                 <div class="commentContainer col overflow-auto">
 
                 </div>
-                <form action="home.php" method="post" class="commentForm col">
                     <div class="row">
-                        <input class="col-8 overflow-auto" type="text" name="newComment" placeholder="Lovely post :)">
+                        <input class="col-8 overflow-auto" type="text" name="newComment" placeholder="120 character limit">
                         <button type="submit" class="commentButton col">comment</button>
                     </div>
-                </form>
             </div>
-            <img src="" alt=""><br>
+            <img src="" alt="There should be a picture here"><br>
             <div class="userCaption">
                 
             </div>
@@ -165,7 +159,7 @@
 </div>
 
 <script src="scripts/createPost.js"></script>
-<script src="scripts/loadHomeScript.js"></script>
+<script type="module" src="scripts/loadHomeScript.js"></script>
 </body>
 </html>
 
@@ -188,7 +182,7 @@ if(isset($_COOKIE["email"])){
                 || $uploadFile["type"] == "image/jpeg"
                 || $uploadFile["type"] == "image/pjpeg" || $uploadFile["type"]=="image/jpg")){
             if($uploadFile["error"]>0){
-                echo "<script src='scripts/failedScript.js'></script>";
+                echo "an error occurred.";
             }else{
                 $targetFile = $targetDir.basename($uploadFile["name"]);
                 $imageFileType = pathinfo($targetFile,PATHINFO_EXTENSION);
@@ -196,7 +190,6 @@ if(isset($_COOKIE["email"])){
                     echo $uploadFile["name"]." already exists.";
                 }else{
                     move_uploaded_file($uploadFile["tmp_name"],$targetFile);
-                    echo "<script src='scripts/successScript.js'></script>";
                     echo "<script src='scripts/uploadPost.js'></script>";
                 }
             }

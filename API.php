@@ -11,9 +11,19 @@
             }
         }
 
+        function createComment($comment,$userID,$galleryID){
+            global $conn;
+            $sql = "Insert into tbcomments(comment,userID,galleryID)VALUES('".$comment."','".$userID."','".$galleryID."');";
+            if(mysqli_query($conn,$sql)){
+                return http_response_code(200);
+            }else{
+                return http_response_code(509);
+            }
+        }
+
         function getComments($galleryID){
             global $conn;
-            $query = "SELECT * FROM `tbcomments` WHERE galleryID=".$galleryID." ORDER BY timeStamp";
+            $query = "SELECT * FROM `tbcomments` WHERE galleryID=".$galleryID." ORDER BY timeStamp DESC";
             $res = mysqli_query($conn,$query);
             $count =0;
             while ($row=mysqli_fetch_assoc($res)){
@@ -106,6 +116,20 @@
             return json_encode($data);
         }
 
+        function getUserImage($userID,$userHashtag){
+            global $conn;
+            $query = "SELECT * FROM `tbgallery` WHERE userID='".$userID."' and hashtags='".$userHashtag."' ORDER BY timestamp DESC;";
+            $res = mysqli_query($conn,$query);
+            $count =0;
+            while ($row=mysqli_fetch_assoc($res)){
+                $data[$count]=array(
+                    'galleryID'=>$row['galleryID'],
+                );
+                $count++;
+            }
+            return json_encode($data);
+        }
+
         function getImagesInAlbumsOfUser($userID,$albumID){
             global $conn;
             $query = "SELECT * FROM `tbgallery` WHERE userID='".$userID."' AND albumID='".$albumID."' ORDER BY timestamp DESC;";
@@ -191,8 +215,15 @@
         header('Content-type: application/json');
         echo $API->getComments($_GET['galleryIDComments']);
     }
-    if(isset($_GET['userID'])){
+    if(isset($_GET['userID']) && isset($_GET['userIDdud'])){
         header('Content-type: application/json');
         echo $API->getUserName($_GET['userID']);
+    }
+    if(isset($_GET['comment']) && isset($_GET['userID']) && isset($_GET['galleryID'])){
+        $API->createComment($_GET['comment'],$_GET['userID'],$_GET['galleryID']);
+    }
+    if(isset($_GET['userID']) && isset($_GET['userHashtag']) ){
+        header('Content-type: application/json');
+        echo $API->getUserImage($_GET['userID'],$_GET['userHashtag']);
     }
 ?>
