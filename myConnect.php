@@ -1,9 +1,13 @@
 <?php
+//server
 //username:u17074292
 //password:fsuzkhcr
+//local
+//username: root
+//password:""
 $server = "localhost";
-$username = "root";
-$password = "";
+$username = "u17074292";
+$password = "fsuzkhcr";
 $database = "dbu17074292";
 //Create Connection
 $conn = mysqli_connect($server, $username, $password, $database);
