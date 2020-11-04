@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2020 at 11:39 PM
+-- Generation Time: Nov 04, 2020 at 02:12 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.6
 
@@ -59,10 +59,36 @@ CREATE TABLE `tbcomments` (
 --
 
 INSERT INTO `tbcomments` (`comment`, `userID`, `galleryID`, `timeStamp`) VALUES
-('this will be one of many', 1, 1, '2020-10-04 22:00:00'),
+('come now man', 1, 7, '2020-11-04 11:34:55'),
+('hpw about now', 1, 7, '2020-11-04 10:40:51'),
+('i have a sneaky suspicion this is working ', 1, 4, '2020-11-04 11:35:23'),
+('load test ', 1, 11, '2020-11-04 11:29:02'),
+('load test 2', 1, 11, '2020-11-04 11:30:09'),
+('please load', 1, 11, '2020-11-04 11:13:54'),
+('tes of reload', 1, 11, '2020-11-04 13:02:19'),
+('test 12343546', 1, 11, '2020-11-04 11:15:08'),
+('test 12343546', 1, 11, '2020-11-04 11:15:16'),
+('test 12343546', 1, 11, '2020-11-04 11:15:18'),
+('test caption ', 1, 5, '2020-11-04 10:26:03'),
 ('test dos', 2, 1, '2020-10-04 22:00:00'),
 ('test dos', 2, 3, '2020-10-04 22:00:00'),
-('test...yes', 2, 6, '2020-10-04 22:00:00');
+('test for load 2', 1, 7, '2020-11-04 11:31:27'),
+('test new load ', 1, 11, '2020-11-04 11:32:25'),
+('test new test yes', 1, 11, '2020-11-04 13:01:13'),
+('test of new code', 1, 11, '2020-11-04 11:34:41'),
+('test of the new system', 1, 7, '2020-11-04 10:40:40'),
+('test...yes', 2, 6, '2020-10-04 22:00:00'),
+('test1234', 1, 2, '2020-11-04 10:36:58'),
+('test1234', 1, 11, '2020-11-04 10:17:33'),
+('test12345678', 1, 11, '2020-11-04 10:45:53'),
+('test?', 1, 4, '2020-11-04 10:33:05'),
+('thi is gonna be a test ', 1, 7, '2020-11-04 10:18:02'),
+('this is a tes t', 3, 6, '2020-11-04 10:19:18'),
+('this is the newest test ', 1, 11, '2020-11-04 10:51:58'),
+('this will be one of many', 1, 1, '2020-10-04 22:00:00'),
+('werk man', 3, 1, '2020-11-04 10:31:05'),
+('what about now', 1, 11, '2020-11-04 11:14:13'),
+('what the hell', 1, 7, '2020-11-04 11:16:33');
 
 -- --------------------------------------------------------
 
@@ -103,7 +129,9 @@ INSERT INTO `tbgallery` (`galleryID`, `filename`, `caption`, `hashtags`, `timest
 (3, 'Images/d1.jpg', 'this is a test caption', '#tired', '2020-10-05 14:07:27', '1', 1, 0, 0),
 (4, 'Images/d1.jpg', 'testcaption ', '#tryme', '2020-10-05 17:41:23', NULL, 1, 0, 0),
 (5, 'Images/d4.jpg', 'this is a test', '#hellYea', '2020-10-05 17:42:24', NULL, 1, 0, 0),
-(6, 'Images/purple.jpg', 'this is a purple ', '#purple', '2020-10-05 18:06:57', NULL, 3, 0, 0);
+(6, 'Images/purple.jpg', 'this is a purple ', '#purple', '2020-10-05 18:06:57', NULL, 3, 0, 0),
+(7, 'Images/d3.jpg', 'test of this new method', '#newTest', '2020-11-03 11:24:35', NULL, 1, 0, 0),
+(11, 'Images/chun-lo-digital-art-4k-e4.jpg', 'chun', '#chun', '2020-11-04 09:07:06', NULL, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -142,7 +170,7 @@ ALTER TABLE `tbalbums`
 -- Indexes for table `tbcomments`
 --
 ALTER TABLE `tbcomments`
-  ADD PRIMARY KEY (`userID`,`galleryID`);
+  ADD PRIMARY KEY (`comment`,`userID`,`galleryID`,`timeStamp`);
 
 --
 -- Indexes for table `tbgallery`
@@ -171,7 +199,7 @@ ALTER TABLE `tbalbums`
 -- AUTO_INCREMENT for table `tbgallery`
 --
 ALTER TABLE `tbgallery`
-  MODIFY `galleryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `galleryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tbusers`
