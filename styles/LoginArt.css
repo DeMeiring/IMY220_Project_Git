@@ -103,20 +103,12 @@ label{
 }
 
 .loginContainer{
-    border:none;
-}
-
-.registerContainer{
-    border:none;
-}
-
-.loginContainer:hover{
     border: 0.3em solid rgba(240, 234, 214,0.6);
     border-radius: 5px;
     transition: border 2s;
 }
 
-.registerContainer:hover{
+.registerContainer{
     border: 0.3em solid rgba(240, 234, 214,0.6);
     border-radius: 5px;
     transition: border 2s;
@@ -155,38 +147,26 @@ input[class^="btn"]{
     margin-top: 1em;
 }
 
-#loginSubmit:hover{
+#loginSubmit{
     border: 0.1em solid rgba(240, 234, 214,0.9);
     border-radius: 5px;
 }
 
-#loginSubmit {
-    transition: transform 0.5s;
-}
-
-#registerSubmit:hover{
+#registerSubmit{
     border: 0.1em solid rgba(240, 234, 214,0.9);
     border-radius: 5px;
 }
 
 #formLogin{
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s;
     width: 70%;
 }
 
 #formRegister{
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1s;
     width: 70%;
-}
-
-#Register:hover>#formRegister{
-    opacity: 1;
-}
-
-#Login:hover>#formLogin{
-    opacity: 1;
 }
 
 #frmControl>label{
