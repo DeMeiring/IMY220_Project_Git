@@ -6,8 +6,8 @@
 //username: root
 //password:""
 $server = "localhost";
-$username = "u17074292";
-$password = "fsuzkhcr";
+$username = "root";
+$password = "";
 $database = "dbu17074292";
 //Create Connection
 $conn = mysqli_connect($server, $username, $password, $database);
