@@ -1,5 +1,7 @@
 (()=>{
-        let template = $('#galleryContainer').html();
+        let template = $('#galleryContainer>.row').eq(0).html();
+        $('#galleryContainer').empty();
+        console.log(template);
         $.ajax({
             //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
             url:"http://localhost/IMY220_Project_Git/API.php",
@@ -11,9 +13,9 @@
             success:(res)=>{
                 let objCount = Object.keys(res).length;
 
-                let appendCount = Math.ceil((objCount/3)-1);
+                let appendCount = Math.ceil((objCount/3));
                 for(let j=0;j<appendCount;j++){
-                    $('#galleryContainer').append(template);
+                    $('#galleryContainer').append('<div class="row">'+template+'</div>');
                 }
 
                 $.getScript("scripts/moreButtonScript.js");

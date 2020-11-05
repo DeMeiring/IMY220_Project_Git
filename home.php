@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/generalStyle.css">
@@ -53,7 +53,7 @@
     <div class="row">
         <div class="imgPost col-3 ml-auto">
             <div class="userName col">
-                
+
             </div>
             <br>
             <div class="moreDisplay">
@@ -78,17 +78,17 @@
             <img src="" alt="There should be a picture here">
             <br>
             <div class="userCaption col">
-                
+
             </div>
             <div class="userHashtags col-1">
-                
+
             </div>
             <button class="more col">More...</button>
         </div>
 
         <div class="imgPost col-3 ml-auto mr-auto ">
             <div class="userName">
-                
+
             </div>
             <br>
             <div class="moreDisplay">
@@ -112,17 +112,17 @@
             </div>
             <img src="" alt="There should be a picture here"><br>
             <div class="userCaption">
-                
+
             </div>
             <div class="userHashtags">
-                
+
             </div>
             <button class="more col">More...</button>
         </div>
 
         <div class="imgPost col-3 mr-auto ">
             <div class="userName">
-                
+
             </div>
             <br>
             <div class="moreDisplay">
@@ -146,10 +146,10 @@
             </div>
             <img src="" alt="There should be a picture here"><br>
             <div class="userCaption">
-                
+
             </div>
             <div class="userHashtags">
-                
+
             </div>
             <button class="more col">More...</button>
         </div>
@@ -159,12 +159,17 @@
 </div>
 
 <script src="scripts/createPost.js"></script>
-<script type="module" src="scripts/loadHomeScript.js"></script>
+<script>
+    if(window.history.replaceState){
+        window.history.replaceState(null,null,window.location.href);
+    }
+</script>
 </body>
 </html>
 
 <?php
 include 'myConnect.php';
+echo "<script type='module' src='scripts/loadHomeScript.js'></script>";
 //code for uregistered users to not be allowed to homepage
 if(isset($_COOKIE["email"])){
     $email = $_COOKIE["email"];
@@ -187,10 +192,10 @@ if(isset($_COOKIE["email"])){
                 $targetFile = $targetDir.basename($uploadFile["name"]);
                 $imageFileType = pathinfo($targetFile,PATHINFO_EXTENSION);
                 if(file_exists($targetFile)){
-                    echo $uploadFile["name"]." already exists.";
+                    echo "<script type='module' src='scripts/uploadPost.js'></script>";
                 }else{
                     move_uploaded_file($uploadFile["tmp_name"],$targetFile);
-                    echo "<script src='scripts/uploadPost.js'></script>";
+                    echo "<script type='module' src='scripts/uploadPost.js'></script>";
                 }
             }
         }

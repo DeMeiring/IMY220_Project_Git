@@ -12,11 +12,12 @@
             'filename':fileName
         },
         success:(res)=>{
-            alert("Successfully performed update");
+            $('img').attr('src',fileName);
+            $('#hiddenEmail').remove();
+            $('#newFilename').remove();
         },
         error:(e)=>{
             console.log(e);
         }
     })
-
 })()

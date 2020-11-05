@@ -1,4 +1,6 @@
 (()=>{
+
+    $('postContainer').empty();
     let userEmail = $('#hiddenEmail').val();
     let fileDirName = 'Images/'+$('#hiddenfilename').val();
     let caption = $('#hiddencaption').val();
@@ -34,10 +36,11 @@
                     'userID':userID
                 },
                 success:(res)=>{
-                    console.log(fileDirName);
-                    console.log(caption);
-                    console.log(hashtag);
-                    console.log(userID);
+                    $.getScript('scripts/loadHomeScript.js');
+                    $('#hiddenEmail').remove();
+                    $('#hiddenfilename').remove();
+                    $('#hiddencaption').remove();
+                    $('#hiddenhashtag').remove();
                 },
                 error:(e)=>{
                     console.log(e);

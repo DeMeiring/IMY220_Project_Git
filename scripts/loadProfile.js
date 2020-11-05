@@ -12,6 +12,7 @@
             $('#useremail').text(userEmail);
             $('#username').text(res[0]['username']);
             $('img').attr('src',res[0]['pfpImage']);
+            $('#hiddenEmail').remove();
         },
         error:(e)=>{
             console.log(e);

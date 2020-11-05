@@ -52,7 +52,7 @@
             <img id="pfpImage" src="" alt="">
             <div class="row">
                 <div class="col editPfpContainer">
-                    <form action="profile.php" method="post" enctype="multipart/form-data">
+                    <form id="profilePicForm" action="profile.php" method="post" enctype="multipart/form-data">
                         <input name="pfpImage" class="pfpFileUpload profileValueLbl" type="file"/>
                         <input name="post" type="submit" id="submitNewPfp" value="Upload new profile picture">
                     </form>
@@ -84,12 +84,16 @@
     </div>
 </div>
 <script src="scripts/editProfileScript.js"></script>
+<script>
+    if(window.history.replaceState){
+        window.history.replaceState(null,null,window.location.href);
+    }
+</script>
 </body>
 </html>
 <?php
     echo "<input type='hidden' id='hiddenEmail' value='".$_COOKIE['email']."'>";
     echo "<script src='scripts/loadProfile.js'></script>";
-
     if(isset($_POST["post"])){
         $targetDir = "Images/";
         $uploadFile = $_FILES["pfpImage"];
@@ -102,15 +106,17 @@
                 $targetFile = $targetDir.basename($uploadFile["name"]);
                 $imageFileType = pathinfo($targetFile,PATHINFO_EXTENSION);
                 if(file_exists($targetFile)){
-                    echo $uploadFile["name"]." already exists.";
+                    echo "<input type='hidden' id='newFilename' value='Images/".$uploadFile["name"]."'/>";
+                    echo "<input type='hidden' id='hiddenEmail' value='".$_COOKIE["email"]."'/>";
+                    echo "<script src='scripts/changeProfilePic.js'></script>";
                 }else{
                     move_uploaded_file($uploadFile["tmp_name"],$targetFile);
                     echo "<input type='hidden' id='newFilename' value='Images/".$uploadFile["name"]."'/>";
                     echo "<input type='hidden' id='hiddenEmail' value='".$_COOKIE["email"]."'/>";
+
                     echo "<script src='scripts/changeProfilePic.js'></script>";
                 }
             }
         }
     }
-
 ?>
