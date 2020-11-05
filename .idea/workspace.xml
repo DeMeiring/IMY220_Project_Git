@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e060f589-c42b-4c47-9fa2-0fff7ae9e611" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/LoginArt.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/LoginArt.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myConnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/myConnect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/APIInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/APIInterface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/createComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/createComment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/loadAlbums.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/loadAlbums.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/loadHomeScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/loadHomeScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/loadProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/loadProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/uploadPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/uploadPost.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +99,7 @@
       <workItem from="1602162437970" duration="28000" />
       <workItem from="1604392468186" duration="5939000" />
       <workItem from="1604416695556" duration="2022000" />
-      <workItem from="1604423091546" duration="20470000" />
+      <workItem from="1604423091546" duration="20701000" />
     </task>
     <task id="LOCAL-00001" summary="changed ajax calls to be easier to change for server and/or local use">
       <created>1604426475088</created>
