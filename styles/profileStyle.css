@@ -62,3 +62,21 @@ img{
     border-radius: 9px;
     border:2px solid rgba(240, 234, 214,0.9);
 }
+
+#submitNewPfp{
+    background-color: transparent;
+    margin-top: 10%;
+    margin-right: 10%;
+    color: rgba(240, 234, 214,0.9);
+    margin-left: 10px;
+    border:none;
+    border-radius: unset;
+    border-bottom:2px solid rgba(240, 234, 214,0.9);
+}
+
+#uploadFileLabel{
+    padding: 1px;
+    border:none;
+    margin-right: 10px;
+    border-bottom:2px solid rgba(240, 234, 214,0.9);
+}

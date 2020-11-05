@@ -7,7 +7,17 @@
             if(mysqli_query($conn,$sql)){
                 return http_response_code(200);
             }else{
-                return http_response_code(404);
+                return http_response_code(500);
+            }
+        }
+
+        function updatePfp($userEmail,$fileName){
+            global $conn;
+            $sql = "UPDATE tbusers SET profilePictureFile='".$fileName."' WHERE email='".$userEmail."';";
+            if(mysqli_query($conn,$sql)){
+                return http_response_code(200);
+            }else{
+                return http_response_code(500);
             }
         }
 
@@ -17,7 +27,7 @@
             if(mysqli_query($conn,$sql)){
                 return http_response_code(200);
             }else{
-                return http_response_code(509);
+                return http_response_code(500);
             }
         }
 
@@ -225,5 +235,8 @@
     if(isset($_GET['userID']) && isset($_GET['userHashtag']) ){
         header('Content-type: application/json');
         echo $API->getUserImage($_GET['userID'],$_GET['userHashtag']);
+    }
+    if(isset($_GET['userEmail']) && isset($_GET['filename'])){
+        $API->updatePfp($_GET['userEmail'],$_GET['filename']);
     }
 ?>
