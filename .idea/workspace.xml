@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e060f589-c42b-4c47-9fa2-0fff7ae9e611" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Images/testForProfilePicture.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/testForProfilePicture.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/changeProfilePic.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
