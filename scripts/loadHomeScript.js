@@ -3,8 +3,8 @@
         $('#galleryContainer').empty();
         console.log(template);
         $.ajax({
-            //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
-            url:"http://localhost/IMY220_Project_Git/API.php",
+            url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+            //url:"http://localhost/IMY220_Project_Git/API.php",
             type:'GET',
             cache:false,
             data:{
@@ -35,8 +35,8 @@
 
 function loadComments(galleryID,commentIndex){
     $.ajax( {
-        //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
-        url:"http://localhost/IMY220_Project_Git/API.php",
+        url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+        //url:"http://localhost/IMY220_Project_Git/API.php",
         type:'GET',
         cache:false,
         data:{
@@ -56,8 +56,8 @@ function loadComments(galleryID,commentIndex){
 
 function getUsername(uid , index){
     $.ajax({
-        //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
-        url:"http://localhost/IMY220_Project_Git/API.php",
+        url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+        //url:"http://localhost/IMY220_Project_Git/API.php",
         type:'GET',
         cache:false,
         data:{

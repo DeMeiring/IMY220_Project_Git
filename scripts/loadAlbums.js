@@ -2,8 +2,8 @@
     let userEmail = $('#hiddenEmail').val();
     function getUID(){
         $.ajax({
-            //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
-            url:"http://localhost/IMY220_Project_Git/API.php",
+            url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+            //url:"http://localhost/IMY220_Project_Git/API.php",
             type:'GET',
             cache:false,
             data:{
@@ -21,8 +21,8 @@
      function getAlbumID(userID){
         console.log(userID);
         $.ajax({
-            //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
-            url:"http://localhost/IMY220_Project_Git/API.php",
+            url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+            //url:"http://localhost/IMY220_Project_Git/API.php",
             type:'GET',
             cache:false,
             data:{
@@ -40,8 +40,8 @@
 
     function getFromAPI(userID){
         $.ajax({
-            //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
-            url:"http://localhost/IMY220_Project_Git/API.php",
+            url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+            //url:"http://localhost/IMY220_Project_Git/API.php",
             type:'GET',
             cache:false,
             data:{
@@ -76,8 +76,8 @@
 
     function eventApply(albumID){
             $.ajax({
-                //url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
-                url:"http://localhost/IMY220_Project_Git/API.php",
+                url:'http://imy.up.ac.za/IMY220/u17074292/API.php',
+                //url:"http://localhost/IMY220_Project_Git/API.php",
                 type:'GET',
                 cache:false,
                 data:{
