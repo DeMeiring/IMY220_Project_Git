@@ -31,6 +31,21 @@
             }
         }
 
+        function getAllUsers(){
+            global $conn;
+            $query = "SELECT * FROM tbusers order by username asc limit 20;";
+            $res = mysqli_query($conn,$query);
+            $count =0;
+            while ($row=mysqli_fetch_assoc($res)){
+                $data[$count]=array(
+                    'email'=>$row['email'],
+                    'profilePictures'=>$row['profilePictureFile']
+                );
+                $count++;
+            }
+            return json_encode($data);
+        }
+
         function getComments($galleryID){
             global $conn;
             $query = "SELECT * FROM `tbcomments` WHERE galleryID=".$galleryID." ORDER BY timeStamp DESC";
@@ -39,6 +54,20 @@
             while ($row=mysqli_fetch_assoc($res)){
                 $data[$count]=array(
                     'comment'=>$row['comment'],
+                );
+                $count++;
+            }
+            return json_encode($data);
+        }
+
+        function getFriends($userEmail){
+            global $conn;
+            $query = "SELECT * FROM `tbfriends` WHERE userEmail=".$userEmail." ORDER BY friendEmail DESC";
+            $res = mysqli_query($conn,$query);
+            $count =0;
+            while ($row=mysqli_fetch_assoc($res)){
+                $data[$count]=array(
+                    'friendEmail'=>$row['friendEmail'],
                 );
                 $count++;
             }
@@ -101,6 +130,7 @@
             $count =0;
             while ($row=mysqli_fetch_assoc($res)){
                 $data[$count]=array(
+                    'userEmail'=>$row['email'],
                     'username'=>$row['username'],
                     'userID'=>$row['userID'],
                     'pfpImage'=>$row['profilePictureFile']
@@ -216,49 +246,53 @@
         echo $API->selectAllImages();
     }
 
-    if(isset($_GET['userpfp'])){
+    if(isset($_GET['userpfp'])){//get user profile picture
         header('Content-type: application/json');
         echo $API->SelectPFP($_GET['userEmail']);
     }
-    if(isset($_GET['userEmail'])){
+    if(isset($_GET['userEmail'])){//get all of specific user info
         header('Content-type: application/json');
         echo $API->Select($_GET['userEmail']);
     }
-    if(isset($_GET['imageGetUserID'])){
+    if(isset($_GET['imageGetUserID'])){//get all images associated with userID
         header('Content-type: application/json');
         echo $API->getUserImages($_GET['imageGetUserID']);
     }
-    if(isset($_GET['userID']) && isset($_GET['albumID'])){
+    if(isset($_GET['userID']) && isset($_GET['albumID'])){//get all images for a specific album of user
         header('Content-type: application/json');
         echo $API->getImagesInAlbumsOfUser($_GET['userID'],$_GET['albumID']);
     }
-    if(isset($_POST['filename']) && isset($_POST['captions']) && isset($_POST['hashtags']) && isset($_POST['userID'])){
+    if(isset($_POST['filename']) && isset($_POST['captions']) && isset($_POST['hashtags']) && isset($_POST['userID'])){//create image post
         $API->createPost($_POST['filename'],$_POST['captions'],$_POST['hashtags'],$_POST['userID']);
     }
-    if(isset($_GET['userIDAlbums']) && isset($_GET['albumIDAlbums'])){
+    if(isset($_GET['userIDAlbums']) && isset($_GET['albumIDAlbums'])){//get all albums for a associated user
         header('Content-type: application/json');
         echo $API->getAlbums($_GET['userIDAlbums'],$_GET['albumIDAlbums']);
     }
-    if(isset($_GET["galleryIDComments"])){
+    if(isset($_GET["galleryIDComments"])){//get all comments for associated image
         header('Content-type: application/json');
         echo $API->getComments($_GET['galleryIDComments']);
     }
-    if(isset($_GET['userID']) && isset($_GET['userIDdud'])){
+    if(isset($_GET['userID']) && isset($_GET['userIDdud'])){//get username for associated userID
         header('Content-type: application/json');
         echo $API->getUserName($_GET['userID']);
     }
-    if(isset($_GET['comment']) && isset($_GET['userID']) && isset($_GET['galleryID'])){
+    if(isset($_GET['comment']) && isset($_GET['userID']) && isset($_GET['galleryID'])){//create comment for userID and image associated
         $API->createComment($_GET['comment'],$_GET['userID'],$_GET['galleryID']);
     }
-    if(isset($_GET['userID']) && isset($_GET['userHashtag']) ){
+    if(isset($_GET['userID']) && isset($_GET['userHashtag']) ){//get imageID for specific userID and hastag combo
         header('Content-type: application/json');
         echo $API->getUserImage($_GET['userID'],$_GET['userHashtag']);
     }
-    if(isset($_GET['userEmail']) && isset($_GET['filename'])){
+    if(isset($_GET['userEmail']) && isset($_GET['filename'])){//update current user profile picture
         $API->updatePfp($_GET['userEmail'],$_GET['filename']);
     }
     if(isset($_GET['albumID']) && isset($_GET['getUserAlbums'])){
         header('Content-type: application/json');
         echo $API->getAlbumImages($_GET['albumID']);
+    }
+    if(isset($_GET['getAllUsers'])){//get first 20 users
+        header('Content-type: application/json');
+        echo $API->getAllUsers();
     }
 ?>

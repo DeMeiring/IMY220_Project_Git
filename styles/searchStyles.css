@@ -1,0 +1,87 @@
+@keyframes nameAnimate{
+    0%{
+        letter-spacing: -17px;
+        opacity: 0;
+    }
+    30%{
+        letter-spacing: 4px;
+        opacity: 1;
+    }
+    100%{
+        letter-spacing: 4px;
+        opacity: 1;
+    }
+}
+
+#userSearchBar{
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 12px;
+    border: 2px solid rgba(240, 234, 214,0.9);
+}
+
+.loadedImages:first-child{
+    object-fit: fill;
+    height: 300px;
+    width: 300px;
+    margin-top: 10%;
+    padding:10px;
+    border-radius: 30px;
+    border: 2px solid rgba(240, 234, 214,0.9);
+}
+
+.loadedImages{
+    object-fit: fill;
+    height: 300px;
+    width: 300px;
+    margin-top: 10%;
+    margin-left: 10%;
+    padding:10px;
+    border-radius: 30px;
+    border: 2px solid rgba(240, 234, 214,0.9);
+}
+
+.loadCapImgContainer{
+    text-align: center;
+}
+
+.loadContainer{
+    margin-top: 10%;
+}
+
+.userProfileImage{
+    object-fit: fill;
+    height: 400px;
+    width: 400px;
+    margin-left: 30px;
+    margin-top: 10%;
+    padding:10px;
+    border-radius: 50%;
+    border: 2px solid rgba(240, 234, 214,0.9);
+}
+
+.userPostHistoryContainer{
+    padding: 10px;
+    margin-left: -85px;
+    border-radius: 12px;
+}
+
+h2{
+    animation: nameAnimate 4s ease-out forwards;
+    margin-top: 25%;
+    margin-left: 20px;
+}
+
+.postImage{
+    object-fit: fill;
+    height: 300px;
+    width: 300px;
+    padding:10px;
+    border-radius: 30px;
+    border: 2px solid rgba(240, 234, 214,0.9);
+}
+
+.postContainers{
+    margin-left: 50px;
+    margin-top: 10%;
+}

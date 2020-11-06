@@ -26,20 +26,16 @@
                     <button id="createPostButton" style="font-weight: bold;color: rgb(240, 234, 214);" class="btn bg-transparent" type="submit" name="createPost">create post</button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a style="color: rgb(240, 234, 214);" class="nav-link" href="home.php">home</a>
-                        </li>
                         <li class="nav-item">
                             <a style="color: rgb(240, 234, 214);" class="nav-link" href="albums.php">albums</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: rgb(240, 234, 214);" class="nav-link" href="searchPage.php">search user</a>
                         </li>
                         <li class="nav-item">
                             <a style="color: rgb(240, 234, 214);" class="nav-link" href="profile.php">profile</a>
                         </li>
                     </ul>
-                    <form action="home.php" method="get" class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button style="color: rgb(240, 234, 214); font-weight: bold " class="btn bg-transparent my-2 my-sm-0" type="submit">Search</button>
-                    </form>
                 </div>
             </nav>
             <div id="postContainer" class="col-12">

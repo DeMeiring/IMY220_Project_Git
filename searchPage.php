@@ -12,7 +12,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles/generalStyle.css">
     <link rel="icon" href="Images/1000.png">
-    <link rel="stylesheet" href="styles/profileStyle.css">
+    <link rel="stylesheet" href="styles/searchStyles.css">
     <title>A Thousand Words</title>
 </head>
 <body>
@@ -35,7 +35,14 @@
                         <li class="nav-item">
                             <a style="color: rgb(240, 234, 214);" class="nav-link" href="searchPage.php">search user</a>
                         </li>
+                        <li class="nav-item">
+                            <a style="color: rgb(240, 234, 214);" class="nav-link" href="profile.php">profile</a>
+                        </li>
                     </ul>
+                    <div class="form-inline my-2 my-lg-0">
+                        <input id="userSearchBar" class="form-control mr-sm-2" type="search" placeholder="user email" aria-label="Search">
+                        <button id="userSearchButton" style="color: rgb(240, 234, 214); font-weight: bold " class="btn bg-transparent my-2 my-sm-0">Search</button>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -43,27 +50,25 @@
 </div>
 <div class="container">
     <div id="profileEditContainer">
-        <div class="profilePicture col">
-            <div>
-                <label id="useremail" class="profileValueLbl col"></label>
+        <div class="searchedUserContainer">
+            <div class="userInfoContainer row">
+
             </div>
             <br>
-            <img id="pfpImage" src="" alt="">
-            <div class="row">
-                <div class="col editPfpContainer">
-                    <form id="profilePicForm" action="profile.php" method="post" enctype="multipart/form-data">
-                        <input name="pfpImage" class="pfpFileUpload profileValueLbl offset-1" type="file"/>
-                        <input name="post" type="submit" id="submitNewPfp" value="Upload new profile picture">
-                    </form>
-                </div>
-            </div>
-            <div class="postHistoryContainer row">
+            <div class="userPostHistory offset-1">
+                <div class="userPostHistoryContainer row">
 
+                </div>
             </div>
         </div>
     </div>
+    <div class="loadPage">
+        <div class="row loadContainer">
+
+        </div>
+    </div>
 </div>
-<script src="scripts/editProfileScript.js"></script>
+<script src="scripts/searchUsersLoad.js"></script>
 <script>
     if(window.history.replaceState){
         window.history.replaceState(null,null,window.location.href);
@@ -72,32 +77,5 @@
 </body>
 </html>
 <?php
-    echo "<input type='hidden' id='hiddenEmail' value='".$_COOKIE['email']."'>";
-    echo "<script src='scripts/loadProfile.js'></script>";
-    echo "<script src='scripts/getPostHistory.js'></script>";
-    if(isset($_POST["post"])){
-        $targetDir = "Images/";
-        $uploadFile = $_FILES["pfpImage"];
-        if(($uploadFile["type"] == "image/gif"
-            || $uploadFile["type"] == "image/jpeg"
-            || $uploadFile["type"] == "image/pjpeg" || $uploadFile["type"]=="image/jpg")){
-            if($uploadFile["error"]>0){
-                echo "an error occurred.";
-            }else{
-                $targetFile = $targetDir.basename($uploadFile["name"]);
-                $imageFileType = pathinfo($targetFile,PATHINFO_EXTENSION);
-                if(file_exists($targetFile)){
-                    echo "<input type='hidden' id='newFilename' value='Images/".$uploadFile["name"]."'/>";
-                    echo "<input type='hidden' id='hiddenEmail' value='".$_COOKIE["email"]."'/>";
-                    echo "<script src='scripts/changeProfilePic.js'></script>";
-                }else{
-                    move_uploaded_file($uploadFile["tmp_name"],$targetFile);
-                    echo "<input type='hidden' id='newFilename' value='Images/".$uploadFile["name"]."'/>";
-                    echo "<input type='hidden' id='hiddenEmail' value='".$_COOKIE["email"]."'/>";
-
-                    echo "<script src='scripts/changeProfilePic.js'></script>";
-                }
-            }
-        }
-    }
+echo "<input type='hidden' id='hiddenEmail' value='".$_COOKIE['email']."'>";
 ?>

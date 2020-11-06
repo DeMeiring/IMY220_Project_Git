@@ -52,7 +52,7 @@
                 let objCount = Object.keys(res).length;
                 for(let j=0;j<objCount;j++){
                     $('.albumCont').append(`
-                        <div class="col-6 albumExpand">
+                        <div class="albumExpand col-6">
                             <img src="${res[j]['albumImage']}" class="albumCover" alt="" onclick="event">
                             <h3 class="albumName col">${res[j]['albumName']}</h3>
                             <input type="hidden" value="${res[j]['albumID']}"/>
@@ -93,7 +93,7 @@
 
                     for(let i=0;i<objCount;i++){
                         $('.albumExpandCont').append(`
-                                    <div class="imgExpand col-4">
+                                    <div class="imgExpand col-sm-6 col-md-5">
                                           <img src="${res[i]['fileName']}" alt=""/><br>
                                     </div>
                                 `);

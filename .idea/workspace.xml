@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e060f589-c42b-4c47-9fa2-0fff7ae9e611" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Images/coding_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/eyeThing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/spaceShit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/spaceSwirl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/ubuntuDisco.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/ubuntuLogo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/getPostHistory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/searchUsersLoad.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/searchPage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/searchStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/30_Meiring.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/30_Meiring.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API.php" beforeDir="false" afterPath="$PROJECT_DIR$/API.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/albums.php" beforeDir="false" afterPath="$PROJECT_DIR$/albums.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/changeProfilePic.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/changeProfilePic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/loadAlbums.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/loadAlbums.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/loadProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/loadProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/homeStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/homeStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/albumStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/albumStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/profileStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/profileStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -257,10 +252,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="196" height="539" key="HiddenNamespacesPopup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1598984190694" />
-    <state x="-1126" y="459" key="NewPhpFileDialog" timestamp="1601895137602">
+    <state x="-1126" y="459" key="NewPhpFileDialog" timestamp="1604690773836">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1126" y="459" key="NewPhpFileDialog/-1920.0.1920.1080/0.0.1920.1080@-1920.0.1920.1080" timestamp="1601895137601" />
+    <state x="-1126" y="459" key="NewPhpFileDialog/-1920.0.1920.1080/0.0.1920.1080@-1920.0.1920.1080" timestamp="1604690773836" />
     <state x="794" y="459" key="NewPhpFileDialog/-1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1601721379602" />
     <state x="794" y="459" key="NewPhpFileDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1598980998897" />
     <state x="461" y="185" key="SettingsEditor" timestamp="1601720535193">

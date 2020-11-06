@@ -17,7 +17,7 @@
 <body>
     <div class="fluid-container" id="largeFrame">
         <div class="row">
-            <div id="bigArtContainer" class="col-6 offset-sm-1">
+            <div id="bigArtContainer" class="col-6 col-md-5 offset-sm-1">
                 <div class="artContainer row">
                     <div class="col loginContainer" id="Login">
                         <label><i class="fa fa-camera-retro"></i>Login:</label>
@@ -27,7 +27,7 @@
                                 <input class="col-12" type="text" id="emailIn" name="email" placeholder="johnDoe@gmail.com"><br>
                                 <label class="col-12">Password</label><br>
                                 <input class="col-12" type="password" id="pswIn" name="password" placeholder="strongPass123"><br>
-                                <input class="btn col-sm-12" style="color: rgba(245,245,245,0.9);font-weight: bold" type="submit" name="lSubmit" id="loginSubmit" value="Log in">
+                                <input class="btn col-12" style="color: rgba(245,245,245,0.9);font-weight: bold" type="submit" name="lSubmit" id="loginSubmit" value="Log in">
                             </form>
                         </div>
                         <div class="errorContainer">
