@@ -50,25 +50,8 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="albumCont col-md-6">
-                    <img src="" class="albumCover" alt="">
-                    <h3 class="albumName col"></h3>
-                </div>
-                <div class="albumCont col-md-6">
-                    <img src="" class="albumCover" alt="">
-                    <h3 class="albumName col"></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="albumCont col-md-6">
-                    <img src="" class="albumCover" alt="">
-                    <h3 class="albumName col"></h3>
-                </div>
-                <div class="albumCont col-md-6">
-                    <img src="" class="albumCover" alt="">
-                    <h3 class="albumName col"></h3>
-                </div>
+            <div class="row albumCont">
+
             </div>
         </div>
     </div>

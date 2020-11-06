@@ -12,8 +12,7 @@
             'filename':fileName
         },
         success:(res)=>{
-            $('img').attr('src',fileName);
-            $('#hiddenEmail').remove();
+            $('img').eq(0).attr('src',fileName);
             $('#newFilename').remove();
         },
         error:(e)=>{

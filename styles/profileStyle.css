@@ -28,9 +28,18 @@
     margin-right: 10%;
 }
 
-img{
+#pfpImage{
     animation-name: animatePfp;
     animation-duration: 2s;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 4px;
+    border: 2px solid rgba(240, 234, 214,0.9);
+}
+
+img{
     height: 300px;
     width: 300px;
     border-radius: 50%;
@@ -61,6 +70,24 @@ img{
     color: rgba(240, 234, 214,0.9);
     border-radius: 9px;
     border:2px solid rgba(240, 234, 214,0.9);
+}
+
+.postHistoryContainer{
+    margin-top: 60px;
+}
+
+.imgHistory{
+    margin:20px;
+}
+
+.historyCaption{
+    margin:20px;
+}
+
+.historyImgCap{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top:2px solid rgba(240, 234, 214,0.9);
 }
 
 #submitNewPfp{

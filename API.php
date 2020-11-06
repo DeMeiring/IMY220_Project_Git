@@ -110,6 +110,23 @@
             return json_encode($data);
         }
 
+        function getAlbumImages($albumID){
+            global $conn;
+            $query = "SELECT * FROM `tbgallery` WHERE albumID='".$albumID."' ORDER BY timestamp DESC;";
+            $res = mysqli_query($conn,$query);
+            $count =0;
+            while ($row=mysqli_fetch_assoc($res)){
+                $data[$count]=array(
+                    'fileName'=>$row['filename'],
+                    'caption'=>$row['caption'],
+                    'hashtags'=>$row['hashtags'],
+                    'albumID'=>$row['albumID']
+                );
+                $count++;
+            }
+            return json_encode($data);
+        }
+
         function getUserImages($userID){
             global $conn;
             $query = "SELECT * FROM `tbgallery` WHERE userID='".$userID."' ORDER BY timestamp DESC;";
@@ -119,7 +136,8 @@
                 $data[$count]=array(
                     'fileName'=>$row['filename'],
                     'caption'=>$row['caption'],
-                    'hashtags'=>$row['hashtags']
+                    'hashtags'=>$row['hashtags'],
+                    'albumID'=>$row['albumID']
                 );
                 $count++;
             }
@@ -238,5 +256,9 @@
     }
     if(isset($_GET['userEmail']) && isset($_GET['filename'])){
         $API->updatePfp($_GET['userEmail'],$_GET['filename']);
+    }
+    if(isset($_GET['albumID']) && isset($_GET['getUserAlbums'])){
+        header('Content-type: application/json');
+        echo $API->getAlbumImages($_GET['albumID']);
     }
 ?>

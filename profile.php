@@ -24,7 +24,6 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <button id="createPostButton" style="color: rgb(240, 234, 214);font-weight: bold" class="btn bg-transparent" type="submit" name="createPost">edit profile</button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
@@ -49,37 +48,22 @@
 <div class="container">
     <div id="profileEditContainer">
         <div class="profilePicture col">
+            <div>
+                <label id="useremail" class="profileValueLbl col"></label>
+            </div>
+            <br>
             <img id="pfpImage" src="" alt="">
             <div class="row">
                 <div class="col editPfpContainer">
                     <form id="profilePicForm" action="profile.php" method="post" enctype="multipart/form-data">
-                        <input name="pfpImage" class="pfpFileUpload profileValueLbl" type="file"/>
+                        <input name="pfpImage" class="pfpFileUpload profileValueLbl offset-1" type="file"/>
                         <input name="post" type="submit" id="submitNewPfp" value="Upload new profile picture">
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="credentials col">
-                <div class="row">
-                    <div class="labels col-4" id="displayLabels">
-                        <label class="profileLbl col">User Email</label><br>
-                        <label class="profileLbl col">UserName</label><br>
-                        <label class="profileLbl col">User Password</label><br>
-                    </div>
-                    <div class="labels col-4" id="profileLabelValues">
-                        <label id="useremail" class="profileValueLbl col"></label><br>
-                        <label id="username" class="profileValueLbl col"></label><br>
-                        <label id="userpassword" class="profileValueLbl col">****</label><br>
-                    </div>
-                    <div class="buttons col-4">
-                        <button type="button" class="profileBtn col-5">Edit</button>
-                        <br>
-                        <button  type="button" class="profileBtn col-5">Edit</button>
-                        <br>
-                        <button  type="button" class="profileBtn col-5">Edit</button>
-                        <br>
-                    </div>
-                </div>
+            <div class="postHistoryContainer row">
+
+            </div>
         </div>
     </div>
 </div>
@@ -94,6 +78,7 @@
 <?php
     echo "<input type='hidden' id='hiddenEmail' value='".$_COOKIE['email']."'>";
     echo "<script src='scripts/loadProfile.js'></script>";
+    echo "<script src='scripts/getPostHistory.js'></script>";
     if(isset($_POST["post"])){
         $targetDir = "Images/";
         $uploadFile = $_FILES["pfpImage"];

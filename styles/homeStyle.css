@@ -61,6 +61,7 @@ img{
     transition: border-top 0.5s, border-bottom 0.5s, border-left 0.5s, border-right 0.5s, padding-top 0.5s, padding-bottom 0.5s;
 }
 .userName{
+    text-align: center;
     opacity:0;
     transition: opacity 0.7s;
 }
